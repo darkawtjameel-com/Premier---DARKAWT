@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARKAWT SPORT - ده‌ركه‌وت سپۆرت</title>
+    <style>
+        :root {
+            --primary: #32CD32; /* سەوزی وەرزشی */
+            --dark: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: white;
+            padding-bottom: 50px;
+        }
+
+        /* باکگراوندی جێگیر */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1000');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .section-header h2 {
+            font-size: 20px;
+            margin: 0;
+            padding-left: 10px;
+            border-right: 4px solid var(--primary);
+            padding-right: 10px;
+        }
+
+        /* --- بەشی هەواڵ --- */
+        .news-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .news-info {
+            padding: 15px;
+        }
+
+        .news-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 17px;
+            line-height: 1.5;
+            color: var(--primary);
+        }
+
+        /* لێرە دەقی زیاتر زیادکراوە */
+        .news-info p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+            margin: 0;
+            text-align: justify;
+        }
+
+        /* --- بەشی یارییەکان --- */
+        .match-card {
+            background: rgba(50, 205, 50, 0.1);
+            border: 1px solid rgba(50, 205, 50, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .team {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .score {
+            flex: 1;
+            text-align: center;
+            background: var(--primary);
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .time {
+            font-size: 12px;
+            color: #aaa;
+            text-align: center;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .bottom-nav a.active {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <header>
+        <h1>PRiMER LEAGUE NEWS</h1>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-header">
+            <h2> هەواڵەکان</h2>
+        </div>
+<div class="news-card">
+    <img src=https://resources.premierleague.pulselive.com/photo-resources/2026/01/24/2a06f0c6-2ecc-4b74-8be1-4bfb6c25fc92/Semenyo-and-Marmoush.jpg?width=1440>
+    
+    <div class="news-info">
+        <h3>یەکەم بردنەوەی مان سیتی لە خولی 2026 4 خاڵ لە دوای ئارسناڵ دەبات</h3>
+        <p>
+            دوای هەفتەیەکی نائومێدکەر لەگەڵ دۆڕانی یەک لەدوای یەک لە سەرجەم پاڵەوانێتییەکاندا، مان سیتی کە یاریەکەی بە ئێرلینگ هالاند و فیل فۆدن لەسەر کورسی دەستپێکرد، جیاوازی لەگەڵ ئارسناڵی پێشەنگی کەمکردەوە بۆ چوار خاڵ بە یەکەم بردنەوەی خولی 2026.
+
+عومەر مەرمۆش کە لە جێگەی هالاند سەرپەرشتی هێرشبەرایەتی دەکات، یەکەم گۆڵی خۆی لەم وەرزەدا لە پرێمەرلیگدا تۆمارکرد و پێشکەوتنێکی گرنگی بە تیپەکەی پێپ گواردیۆلا بەخشی و ئەویش لێدانێکی بەهێزی لێدا و بەردەوام بوو لە زاڵبوونیان.
+
+سێمینیۆ کە لە دارستانەکەی دا خاڵەکانی مسۆگەر کرد پێش گێمی یەکەم و لێدانێکی نزمی لە جۆزێ سا تێپەڕاند، گورگەکان نەیانتوانی دوای پشووەکە بگەڕێنەوە.
+
+سیتی لە پلەی دووەمدا دەمێنێتەوە و گورگەکانی خوارەوەی ریزبەندی ریزبەند 14 خاڵ لە سەلامەتی دوورن..
+        </p>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+
+      
+</div>
+        </div>
+
+        <div class="section-header">
+            <h2>یارییه‌كانی ئه‌مڕۆی پرێمه‌رلیگ</h2>
+        </div>
+
+        <div class="match-card">
+            <div class="team">ۆڵڤۆس</div>
+            <div class="score">1 - 2<span class="time">کۆتایی</span></div>
+            <div class="team">ئه‌رسناڵ</div>
+        </div>
+
+        <div class="match-card">
+            <div class="team">مان سیتی</div>
+            <div class="score">0 - 0<span class="time">کاتژمێر 10:00</span></div>
+            <div class="team">لیڤەرپوول</div>
+        </div>
+
+    </div>
+
+    <nav class="bottom-nav">
+        
+        <a href="#"> هەواڵ</a>
+        <a href="#"> یارییەکان</a>
+    </nav>
+<footer>
+        <p>مافی ئەم وێبسایتە پارێزراوە بۆ ده‌ركه‌وت سپۆرت2026</p>
+    </footer>
+</body>
+</html>
